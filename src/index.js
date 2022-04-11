@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './app/pages/layout/Layout';
+import Home from './app/pages/home/home'
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<App></App>}>
+        <Route index element={<Home/>}></Route>
+        <Route path=':id' element={<>Single job</>}></Route>
+      </Route>
+     
+      <Route path='*' element={<>404 error</>}></Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

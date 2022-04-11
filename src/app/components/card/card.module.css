@@ -1,0 +1,27 @@
+.cardcontainer{
+    display: grid;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: white;
+}
+.cardTop{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap:1rem
+}
+.cardTop img{
+    width: 100%;
+    border-radius: 10px;
+}
+.topLeft{
+    grid-column: 1 / span 4;
+
+}
+.topRight{
+    grid-column: 5 /span 11;
+    display: grid;
+}
+.topRight p{
+    border: 1px solid black;
+}
+
